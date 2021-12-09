@@ -1,0 +1,75 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin-top: 0;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/raleway-v22-latin-regular.woff2") format("woff2"), url("../fonts/raleway-v22-latin-regular.woff") format("woff");
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/open-sans-v26-latin-regular.woff2") format("woff2"), url("../fonts/open-sans-v26-latin-regular.woff") format("woff");
+}
+h1, h2, button {
+  font-family: Raleway, sans-serif;
+}
+
+p, li, label, option {
+  font-family: Open Sans, sans-serif;
+  font-size: 1.2em;
+}
+
+body {
+  background-color: #6d6d6d;
+}
+
+.wrapper {
+  background-color: white;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #181818;
+  padding: 20px;
+}
+header a {
+  text-decoration: none;
+  font-weight: normal;
+  color: white;
+}
+header a:hover {
+  background-color: rgba(197, 197, 197, 0.548);
+}
+header h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 2.2em;
+}
+
+footer {
+  background: #313131;
+  padding: 20px 0;
+}
+footer p {
+  color: white;
+  text-align: center;
+  margin: 0;
+}

@@ -1,0 +1,20 @@
+@font-face {
+    font-family: "Raleway";
+    src: url('../fonts/raleway-v22-latin-regular.woff2')format('woff2'),
+         url('../fonts/raleway-v22-latin-regular.woff')format('woff');
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url('../fonts/open-sans-v26-latin-regular.woff2')format('woff2'),
+         url('../fonts/open-sans-v26-latin-regular.woff')format('woff');
+}
+
+h1, h2, button {
+    font-family: Raleway, sans-serif;
+}
+
+p, li, label, option {
+    font-family: Open Sans, sans-serif;
+    font-size: 1.2em;
+}
