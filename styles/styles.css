@@ -44,6 +44,52 @@ body {
   background-color: white;
   max-width: 1200px;
   margin: 0 auto;
+  position: relative;
+}
+
+h2 {
+  margin-top: 20px;
+}
+
+#game-heading {
+  text-align: center;
+}
+
+.player {
+  padding: 20px;
+  border: 2px solid black;
+  margin: 5px 40px;
+  width: 60%;
+  text-align: center;
+}
+.player img {
+  margin: 5px 20px;
+}
+
+#playing-field {
+  display: flex;
+}
+
+#playing-field > div {
+  width: 30%;
+  flex: 1;
+}
+
+#center-field {
+  text-align: center;
+}
+
+#popup {
+  display: none;
+  background-color: #b9b9b9;
+  padding: 25px;
+  margin: auto;
+  width: 35%;
+  position: absolute;
+  text-align: center;
+  border: 2px solid black;
+  left: 32%;
+  top: 33%;
 }
 
 header {
@@ -67,6 +113,7 @@ header h1 {
 footer {
   background: #313131;
   padding: 20px 0;
+  margin-top: 50px;
 }
 footer p {
   color: white;

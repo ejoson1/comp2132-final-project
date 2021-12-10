@@ -6,4 +6,13 @@ body {
     background-color: $wrapperBGC;
     max-width: 1200px;
     margin: 0 auto;
+    position: relative;
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+#game-heading {
+    text-align: center;
 }

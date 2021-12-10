@@ -1,0 +1,8 @@
+#playing-field {
+    display: flex;
+}
+
+#playing-field > div {
+    width: 30%;
+    flex: 1;
+}
