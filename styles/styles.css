@@ -1,3 +1,5 @@
+/* Page-wide variables + mixins */
+/* Page resets */
 html {
   box-sizing: border-box;
 }
@@ -19,6 +21,7 @@ h1, h2, h3, h4, h5, h6, p {
   margin-top: 0;
 }
 
+/* Font setup */
 @font-face {
   font-family: "Raleway";
   src: url("../fonts/raleway-v22-latin-regular.woff2") format("woff2"), url("../fonts/raleway-v22-latin-regular.woff") format("woff");
@@ -36,71 +39,7 @@ p, li, label, option {
   font-size: 1.2em;
 }
 
-body {
-  background-color: #6d6d6d;
-}
-
-.wrapper {
-  background-color: white;
-  max-width: 1200px;
-  margin: 0 auto;
-  position: relative;
-}
-
-h2 {
-  margin-top: 20px;
-}
-
-#game-heading {
-  text-align: center;
-}
-
-button {
-  padding: 10px 30px;
-  font-size: 2.5em;
-}
-
-.player {
-  border: 2px solid black;
-  border-radius: 20px;
-  padding: 20px;
-  margin: 5px 40px;
-  width: 60%;
-  text-align: center;
-}
-.player img {
-  margin: 5px 20px;
-}
-
-#playing-field {
-  display: flex;
-}
-
-#playing-field > div {
-  width: 30%;
-  flex: 1;
-}
-
-#center-field {
-  text-align: center;
-}
-
-#popup {
-  display: none;
-  background-color: #b9b9b9;
-  padding: 25px;
-  margin: auto;
-  width: 35%;
-  position: absolute;
-  text-align: center;
-  border: 2px solid black;
-  left: 32%;
-  top: 33%;
-}
-#popup button {
-  font-size: 1.2em;
-}
-
+/* Header styles */
 header {
   background-color: #181818;
   padding: 20px;
@@ -119,6 +58,117 @@ header h1 {
   font-size: 2.2em;
 }
 
+/* Page general styles */
+body {
+  background-color: #6d6d6d;
+}
+
+.wrapper {
+  background-color: white;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 3em;
+}
+
+p {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+#game-heading {
+  text-align: center;
+}
+
+button {
+  padding: 10px 30px;
+  font-size: 2.5em;
+  background-color: #c4c4c4;
+  border: solid 2px #181818;
+  border-radius: 20px;
+}
+button:hover {
+  background-color: rgba(0, 0, 0, 0.486);
+}
+
+.winner {
+  background-color: #7aff8b;
+}
+
+.loser {
+  background-color: #ff7a7a;
+}
+
+/* Player styles */
+.player {
+  border: 2px solid black;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 5px 40px;
+  width: 60%;
+  text-align: center;
+}
+.player h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+.player p {
+  font-size: 1.5em;
+}
+.player img {
+  margin: 5px 20px;
+}
+
+/* Playfield styles */
+#playing-field {
+  display: flex;
+}
+
+#playing-field > div {
+  width: 30%;
+  flex: 1;
+}
+
+/* Centerfield styles */
+#center-field {
+  text-align: center;
+}
+#center-field h2 {
+  margin-top: 30px;
+}
+#center-field p {
+  font-size: 1.6em;
+  margin: 40px 0;
+}
+
+/* Popup styles */
+#popup {
+  display: none;
+  background-color: #b9b9b9;
+  padding: 25px;
+  margin: auto;
+  width: 35%;
+  position: absolute;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 20px;
+  left: 32.5%;
+  top: 33%;
+}
+#popup button {
+  background-color: #e6e6e6;
+  font-size: 1.2em;
+}
+#popup button:hover {
+  background-color: rgba(238, 238, 238, 0.452);
+}
+
+/* Footer styles */
 footer {
   background: #313131;
   padding: 20px 0;

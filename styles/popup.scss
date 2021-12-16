@@ -1,18 +1,23 @@
 #popup {
     display: none;
-    background-color: rgb(185, 185, 185);
+    background-color: $popupBGC;
     padding: 25px;
     margin: auto;
     width: 35%;
     position: absolute;
     text-align: center;
 
-    border: 2px solid black;
+    @include rounded-border(black, 20px);
 
-    left: 32%;
+    left: 32.5%;
     top: 33%;
 
     button {
+        background-color: rgb(230, 230, 230);
         font-size: 1.2em;
+
+        &:hover {
+            background-color: rgba(238, 238, 238, 0.452);
+        }
     }
 }

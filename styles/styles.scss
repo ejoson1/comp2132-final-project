@@ -1,23 +1,30 @@
-// Page-wide variables
+/* Page-wide variables + mixins */
 @import "variables.scss";
 
-// Page resets
+/* Page resets */
 @import "resets.scss";
 
-// Font setup
+/* Font setup */
 @import "fonts.scss";
 
-// Page general styles
-@import "general-page.scss";
-
-@import "player.scss";
-@import "playfield.scss";
-@import "centerfield.scss";
-@import "popup.scss";
-
-// Header styles
+/* Header styles */
 @import "header.scss";
 
-// Footer styles
+/* Page general styles */
+@import "general-page.scss";
+
+/* Player styles */
+@import "player.scss";
+
+/* Playfield styles */
+@import "playfield.scss";
+
+/* Centerfield styles */
+@import "centerfield.scss";
+
+/* Popup styles */
+@import "popup.scss";
+
+/* Footer styles */
 @import "footer.scss";
 
