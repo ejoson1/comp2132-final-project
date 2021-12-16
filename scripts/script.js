@@ -9,7 +9,7 @@ popup = document.getElementById("popup");
 
 let currentRound = 1;
 let gameActive = false;
-let gameWinner = "";
+
 
 let p1Total = 0;
 let p2Total = 0;
@@ -128,6 +128,7 @@ function playRound(){
 
     if (gameActive == true && currentRound <= 3) {
         roundDisplay.innerHTML = `Round ${currentRound}`;
+
         p1RoundScore = calculateScores(d1Value1, d1Value2);
         playerOne.setScore(p1RoundScore);
 
@@ -149,24 +150,12 @@ function playRound(){
 
         p1DiceField.innerHTML += `${p01Dices}`;
         p2DiceField.innerHTML += `${p02Dices}`;
-        currentRound++;    
-    }
-    else {
-        calculateWinCondition();
-        if (gameWinner == "p1") {
-            $("#popup").fadeIn(300);
-            winnerHeading.innerHTML = "You Win!"
-        }
-        else if (gameWinner == "p2") {
-            $("#popup").fadeIn(300);
-            winnerHeading.innerHTML = "You Lose!"
-        }
-        else if (gameWinner == "draw") {
-            $("#popup").fadeIn(300);
-            winnerHeading.innerHTML = "Draw!"            
+        currentRound++; 
+        
+        if (currentRound == 4) {
+            calculateWinCondition();
         }
     }
-    
 }
 
 function calculateScores(valueOne, valueTwo) {
@@ -187,17 +176,22 @@ function calculateScores(valueOne, valueTwo) {
 
 function calculateWinCondition() {
     if (playerOne.getTotalScore() > playerTwo.getTotalScore()) {
-        gameWinner = "p1";
+        $("#popup").fadeIn(500);
+        winnerHeading.innerHTML = "You Win!"
     }
     else if (playerTwo.getTotalScore() > playerOne.getTotalScore()) {
-        gameWinner = "p2";
+        $("#popup").fadeIn(500);
+        winnerHeading.innerHTML = "You Lose!"
     }
     else {
-        gameWinner = "draw"
+        $("#popup").fadeIn(500);
+        winnerHeading.innerHTML = "Draw!" 
     }
 }
 
 function gameWipe() {
+    clearDiceField();
+    setupDefaultDice();
     p1Total = 0;
     p2Total = 0;
     playerOne.setScore(0);
@@ -213,8 +207,7 @@ function gameWipe() {
     roundDisplay.innerHTML = `Game has not yet begun`;
 
     gameActive = false;
-    setupDefaultDice();
-    popup.style.display = "none";
+    $("#popup").fadeOut(500);
 }
 
 rollStart.addEventListener("click", playRound);

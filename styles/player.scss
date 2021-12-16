@@ -1,6 +1,7 @@
 .player {
+
+    @include rounded-border(black, 20px);
     padding: 20px;
-    border: 2px solid black;
     margin: 5px 40px;
     width: 60%;
 

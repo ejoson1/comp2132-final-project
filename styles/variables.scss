@@ -5,3 +5,13 @@ $bodyBGC: rgb(109, 109, 109);
 $wrapperBGC: rgb(255, 255, 255);
 
 $footerBGC: rgb(49, 49, 49);
+
+@mixin rounded-border($borderColor, $roundedCorners) {
+    border: 2px solid $borderColor;
+    border-radius: $roundedCorners;
+}
+
+@mixin button-style($buttonColor, $roundedCorners) {
+    background-color: $buttonColor;
+    border-radius: $roundedCorners;
+}
